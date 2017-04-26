@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		493AE6591EB088C8002B6A02 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AE6581EB088C7002B6A02 /* SettingsViewController.swift */; };
 		49BBF42E1EB073D90017859B /* sketches-sathertower.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF42D1EB073D90017859B /* sketches-sathertower.png */; };
 		49BBF4331EB074060017859B /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF42F1EB074060017859B /* Map.png */; };
 		49BBF4341EB074060017859B /* Open.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF4301EB074060017859B /* Open.png */; };
@@ -54,6 +55,7 @@
 		07F5849EE3B20DFBFC5C79E1 /* Pods_MarauderMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarauderMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AFEE935E32BCA6779CD2F8 /* Pods-MarauderMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarauderMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarauderMapUITests/Pods-MarauderMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32109BE6591F4E15BCEDB826 /* Pods-MarauderMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarauderMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarauderMapTests/Pods-MarauderMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		493AE6581EB088C7002B6A02 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		49BBF42D1EB073D90017859B /* sketches-sathertower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sketches-sathertower.png"; path = "Assets.xcassets/sketches-sathertower.png"; sourceTree = "<group>"; };
 		49BBF42F1EB074060017859B /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Map.png; path = Assets.xcassets/Map.png; sourceTree = "<group>"; };
 		49BBF4301EB074060017859B /* Open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Open.png; path = Assets.xcassets/Open.png; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
 				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
 				49BBF4371EB074900017859B /* NearbyViewController.swift */,
+				493AE6581EB088C7002B6A02 /* SettingsViewController.swift */,
 				49BBF4391EB076560017859B /* ProfileViewController.swift */,
 				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
 				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
@@ -515,6 +518,7 @@
 			files = (
 				80818A711EB05A4B00E655DA /* SignInViewController.swift in Sources */,
 				80818A751EB05A4B00E655DA /* MapViewController.swift in Sources */,
+				493AE6591EB088C8002B6A02 /* SettingsViewController.swift in Sources */,
 				80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */,
 				80ADEFA11EB0525800B652E5 /* MarauderMap.xcdatamodeld in Sources */,
 				80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */,
