@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MarauderMap/MaraudersMapBanner.png">
+   </FileRef>
+   <FileRef
       location = "group:MarauderMap.xcodeproj">
    </FileRef>
    <FileRef

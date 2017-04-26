@@ -15,6 +15,9 @@
 		80818A751EB05A4B00E655DA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6E1EB05A4B00E655DA /* MapViewController.swift */; };
 		80818A761EB05A4B00E655DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6F1EB05A4B00E655DA /* User.swift */; };
 		80818A771EB05A4B00E655DA /* sketches-sathertower.png in Resources */ = {isa = PBXBuildFile; fileRef = 80818A701EB05A4B00E655DA /* sketches-sathertower.png */; };
+		808AB2AD1EB05E780043784A /* Open.png in Resources */ = {isa = PBXBuildFile; fileRef = 808AB2AA1EB05E780043784A /* Open.png */; };
+		808AB2AE1EB05E780043784A /* parchement.png in Resources */ = {isa = PBXBuildFile; fileRef = 808AB2AB1EB05E780043784A /* parchement.png */; };
+		808AB2B01EB05F520043784A /* MaraudersMapBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 808AB2AF1EB05F520043784A /* MaraudersMapBanner.png */; };
 		80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ADEF981EB0525800B652E5 /* AppDelegate.swift */; };
 		80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ADEF9A1EB0525800B652E5 /* ViewController.swift */; };
 		80ADEF9E1EB0525800B652E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80ADEF9C1EB0525800B652E5 /* Main.storyboard */; };
@@ -58,6 +61,9 @@
 		80818A6E1EB05A4B00E655DA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		80818A6F1EB05A4B00E655DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80818A701EB05A4B00E655DA /* sketches-sathertower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sketches-sathertower.png"; sourceTree = "<group>"; };
+		808AB2AA1EB05E780043784A /* Open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Open.png; sourceTree = "<group>"; };
+		808AB2AB1EB05E780043784A /* parchement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parchement.png; sourceTree = "<group>"; };
+		808AB2AF1EB05F520043784A /* MaraudersMapBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaraudersMapBanner.png; sourceTree = "<group>"; };
 		80ADEF951EB0525800B652E5 /* MarauderMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarauderMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80ADEF981EB0525800B652E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80ADEF9A1EB0525800B652E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,10 +165,13 @@
 				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
 				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
 				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
-				80818A6C1EB05A4B00E655DA /* Person.png */,
-				80818A6D1EB05A4B00E655DA /* Map.png */,
 				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
 				80818A6F1EB05A4B00E655DA /* User.swift */,
+				808AB2AF1EB05F520043784A /* MaraudersMapBanner.png */,
+				808AB2AA1EB05E780043784A /* Open.png */,
+				808AB2AB1EB05E780043784A /* parchement.png */,
+				80818A6C1EB05A4B00E655DA /* Person.png */,
+				80818A6D1EB05A4B00E655DA /* Map.png */,
 				80818A701EB05A4B00E655DA /* sketches-sathertower.png */,
 				80ADEF9C1EB0525800B652E5 /* Main.storyboard */,
 				80ADEFA21EB0525800B652E5 /* Assets.xcassets */,
@@ -311,8 +320,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808AB2AD1EB05E780043784A /* Open.png in Resources */,
+				808AB2B01EB05F520043784A /* MaraudersMapBanner.png in Resources */,
 				80818A771EB05A4B00E655DA /* sketches-sathertower.png in Resources */,
 				80818A741EB05A4B00E655DA /* Map.png in Resources */,
+				808AB2AE1EB05E780043784A /* parchement.png in Resources */,
 				80ADEFA61EB0525800B652E5 /* LaunchScreen.storyboard in Resources */,
 				80ADEFCA1EB053CD00B652E5 /* GoogleService-Info.plist in Resources */,
 				80ADEFA31EB0525800B652E5 /* Assets.xcassets in Resources */,
