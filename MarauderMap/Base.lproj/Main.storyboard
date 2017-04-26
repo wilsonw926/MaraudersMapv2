@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="waT-ke-V0H">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="waT-ke-V0H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -329,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDu-Ec-DQj" id="GfE-L1-wOO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -343,6 +343,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYj-xu-I4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3407" y="140"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ucf-CN-5ve">
+            <objects>
+                <navigationController id="P9a-It-JMK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ryb-CH-XKt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXu-dw-Aro">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BY1-jh-ks3" kind="relationship" relationship="rootViewController" id="qwO-b3-iP9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBU-2h-2nd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="890"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="BSd-a9-IYr">
@@ -365,7 +382,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="spe-mg-K1E" id="c4O-FJ-oFz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-by-nUj">
@@ -392,6 +409,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby" id="AkY-VN-dSA"/>
+                    <navigationItem key="navigationItem" id="A3V-Si-kKx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="m7g-bs-eRD" id="Si8-YV-hjE"/>
@@ -400,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4m-2G-d51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2717.5999999999999" y="857.72113943028489"/>
+            <point key="canvasLocation" x="2718" y="890"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="QmW-9g-zjN">
@@ -503,7 +521,7 @@
                     <connections>
                         <segue destination="BZO-Tf-Ubc" kind="relationship" relationship="viewControllers" id="xwZ-F9-k0g"/>
                         <segue destination="5OV-NR-GHP" kind="relationship" relationship="viewControllers" id="NLL-GP-d9s"/>
-                        <segue destination="BY1-jh-ks3" kind="relationship" relationship="viewControllers" id="ARH-qC-zJk"/>
+                        <segue destination="P9a-It-JMK" kind="relationship" relationship="viewControllers" id="N5u-jY-wT8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOj-Zc-8KB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -521,6 +539,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ScZ-Fd-mUk"/>
-        <segue reference="EZg-Bd-jv7"/>
+        <segue reference="qwO-b3-iP9"/>
     </inferredMetricsTieBreakers>
 </document>
