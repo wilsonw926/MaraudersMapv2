@@ -12,6 +12,9 @@
 		49BBF4341EB074060017859B /* Open.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF4301EB074060017859B /* Open.png */; };
 		49BBF4351EB074060017859B /* parchement.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF4311EB074060017859B /* parchement.png */; };
 		49BBF4361EB074060017859B /* Person.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF4321EB074060017859B /* Person.png */; };
+		49BBF4381EB074900017859B /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF4371EB074900017859B /* NearbyViewController.swift */; };
+		49BBF43A1EB076560017859B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF4391EB076560017859B /* ProfileViewController.swift */; };
+		49BBF43C1EB078E80017859B /* NearbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */; };
 		561E6636249318486C3BBEE9 /* Pods_MarauderMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742D7BB61A53434B5D381731 /* Pods_MarauderMapUITests.framework */; };
 		80818A711EB05A4B00E655DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6A1EB05A4B00E655DA /* SignInViewController.swift */; };
 		80818A721EB05A4B00E655DA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */; };
@@ -56,6 +59,9 @@
 		49BBF4301EB074060017859B /* Open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Open.png; path = Assets.xcassets/Open.png; sourceTree = "<group>"; };
 		49BBF4311EB074060017859B /* parchement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parchement.png; path = Assets.xcassets/parchement.png; sourceTree = "<group>"; };
 		49BBF4321EB074060017859B /* Person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Person.png; path = Assets.xcassets/Person.png; sourceTree = "<group>"; };
+		49BBF4371EB074900017859B /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		49BBF4391EB076560017859B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTableViewCell.swift; sourceTree = "<group>"; };
 		71F13A67587B04FB43106A64 /* Pods_MarauderMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarauderMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		742D7BB61A53434B5D381731 /* Pods_MarauderMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarauderMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80818A6A1EB05A4B00E655DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -129,8 +135,11 @@
 			children = (
 				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
 				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
+				49BBF4371EB074900017859B /* NearbyViewController.swift */,
+				49BBF4391EB076560017859B /* ProfileViewController.swift */,
 				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
 				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
+				49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -509,6 +518,9 @@
 				80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */,
 				80ADEFA11EB0525800B652E5 /* MarauderMap.xcdatamodeld in Sources */,
 				80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */,
+				49BBF4381EB074900017859B /* NearbyViewController.swift in Sources */,
+				49BBF43C1EB078E80017859B /* NearbyTableViewCell.swift in Sources */,
+				49BBF43A1EB076560017859B /* ProfileViewController.swift in Sources */,
 				80818A721EB05A4B00E655DA /* SignUpViewController.swift in Sources */,
 				80818A761EB05A4B00E655DA /* User.swift in Sources */,
 			);

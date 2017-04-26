@@ -329,7 +329,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDu-Ec-DQj" id="GfE-L1-wOO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -347,7 +347,7 @@
         <!--Nearby-->
         <scene sceneID="BSd-a9-IYr">
             <objects>
-                <viewController id="BY1-jh-ks3" sceneMemberID="viewController">
+                <viewController id="BY1-jh-ks3" customClass="NearbyViewController" customModule="MarauderMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HSl-RV-wN6"/>
                         <viewControllerLayoutGuide type="bottom" id="TxF-86-HHL"/>
@@ -357,19 +357,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-bs-eRD">
-                                <rect key="frame" x="0.0" y="49" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="spe-mg-K1E">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nearbyCell" id="spe-mg-K1E" customClass="NearbyTableViewCell" customModule="MarauderMap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="spe-mg-K1E" id="c4O-FJ-oFz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-by-nUj">
+                                                    <rect key="frame" x="26" y="0.0" width="42" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First and Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwW-am-Uc0">
-                                                    <rect key="frame" x="27" y="8" width="153" height="21"/>
+                                                    <rect key="frame" x="94" y="8" width="153" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -377,6 +381,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nearbyName" destination="GwW-am-Uc0" id="e4z-TZ-xTN"/>
+                                            <outlet property="nearbyPic" destination="EOe-by-nUj" id="YoG-yA-NOd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -385,15 +393,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Nearby" id="AkY-VN-dSA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="m7g-bs-eRD" id="Si8-YV-hjE"/>
+                        <segue destination="OjH-74-Ax8" kind="show" identifier="NearbyToProfile" id="cTQ-qy-aMt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4m-2G-d51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2717.5999999999999" y="857.72113943028489"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="QmW-9g-zjN">
             <objects>
-                <viewController id="OjH-74-Ax8" sceneMemberID="viewController">
+                <viewController id="OjH-74-Ax8" customClass="ProfileViewController" customModule="MarauderMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2QC-A3-WB4"/>
                         <viewControllerLayoutGuide type="bottom" id="HBC-Vc-Ry9"/>
@@ -402,7 +414,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Un6-gW-Afa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="Un6-gW-Afa">
                                 <rect key="frame" x="67" y="62" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -420,13 +432,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWa-sx-3U1">
+                                <rect key="frame" x="0.0" y="6" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <segue destination="BY1-jh-ks3" kind="show" id="EZg-Bd-jv7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wilson Wang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-fn-6BS">
+                                <rect key="frame" x="114" y="28" width="168" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="Xbb-E1-bN6" id="X3i-yu-QY6"/>
+                        <outlet property="bio" destination="55x-RZ-nQY" id="cVV-C5-am6"/>
+                        <outlet property="imageView" destination="Un6-gW-Afa" id="2h5-bn-Es6"/>
+                        <outlet property="name" destination="uhT-fn-6BS" id="x9s-1q-2G9"/>
+                        <outlet property="profilePic" destination="Un6-gW-Afa" id="5kA-sn-a4t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4X-Pq-Hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="859.52023988005999"/>
+            <point key="canvasLocation" x="3852" y="890.10494752623697"/>
         </scene>
         <!--Map-->
         <scene sceneID="Rfc-6a-5Ed">
@@ -479,11 +514,13 @@
     <resources>
         <image name="MaraudersMapBanner" width="498" height="479"/>
         <image name="Open.png" width="434" height="129"/>
+        <image name="Person" width="108" height="104"/>
         <image name="parchement" width="1267" height="1919"/>
         <image name="parchement.png" width="1267" height="1919"/>
         <image name="sketches-sathertower.png" width="666" height="910"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ScZ-Fd-mUk"/>
+        <segue reference="EZg-Bd-jv7"/>
     </inferredMetricsTieBreakers>
 </document>
