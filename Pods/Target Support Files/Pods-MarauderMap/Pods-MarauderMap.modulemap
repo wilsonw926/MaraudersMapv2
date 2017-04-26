@@ -1,0 +1,6 @@
+framework module Pods_MarauderMap {
+  umbrella header "Pods-MarauderMap-umbrella.h"
+
+  export *
+  module * { export * }
+}
