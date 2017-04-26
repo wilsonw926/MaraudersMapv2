@@ -126,6 +126,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		49BBF4211EB06DC90017859B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
+				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
+				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
+				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		49BBF4221EB06DE60017859B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80818A6F1EB05A4B00E655DA /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		796ACEEEA732E37938A972E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,11 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				80ADEF981EB0525800B652E5 /* AppDelegate.swift */,
-				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
-				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
-				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
-				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
-				80818A6F1EB05A4B00E655DA /* User.swift */,
+				49BBF4211EB06DC90017859B /* Controllers */,
+				49BBF4221EB06DE60017859B /* Model */,
 				808AB2AF1EB05F520043784A /* MaraudersMapBanner.png */,
 				808AB2AA1EB05E780043784A /* Open.png */,
 				808AB2AB1EB05E780043784A /* parchement.png */,
