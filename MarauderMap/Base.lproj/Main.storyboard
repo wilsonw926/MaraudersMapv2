@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="waT-ke-V0H">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="coO-V7-XSy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--SignIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="SignIn" id="BYZ-38-t0r" customClass="ViewController" customModule="MarauderMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignIn" id="BYZ-38-t0r" customClass="SignInViewController" customModule="MarauderMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,6 +44,9 @@
                                 <rect key="frame" x="115" y="486" width="146" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="didAttemptLogin2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVU-hj-2rG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t53-CK-WCk">
                                 <rect key="frame" x="115" y="557" width="146" height="30"/>
@@ -85,17 +88,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="waT-ke-V0H" kind="show" id="bmc-HJ-uUc"/>
+                        <outlet property="emailField" destination="CJt-MN-tXY" id="P7b-KH-odt"/>
+                        <outlet property="passwordField" destination="rAQ-cg-HBM" id="zys-Ur-6U5"/>
+                        <segue destination="waT-ke-V0H" kind="show" identifier="loginToMain" id="bmc-HJ-uUc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28" y="-158.77061469265368"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="k5y-ik-yPg">
             <objects>
-                <viewController id="coO-V7-XSy" sceneMemberID="viewController">
+                <viewController id="coO-V7-XSy" customClass="SignUpViewController" customModule="MarauderMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYm-U0-rhZ"/>
                         <viewControllerLayoutGuide type="bottom" id="jwl-sy-Azf"/>
@@ -139,6 +144,9 @@
                                 <rect key="frame" x="161" y="503" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="didAttemptSignup:" destination="coO-V7-XSy" eventType="touchUpInside" id="bbH-Pi-t0L"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vw5-Sd-9ed">
                                 <rect key="frame" x="41" y="196" width="294" height="30"/>
@@ -180,7 +188,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="waT-ke-V0H" kind="show" id="ScZ-Fd-mUk"/>
+                        <outlet property="emailField" destination="97D-56-VhB" id="wOX-Kf-Jqw"/>
+                        <outlet property="nameField" destination="vw5-Sd-9ed" id="1Qf-YH-5yt"/>
+                        <outlet property="passwordField" destination="UpH-5O-QHL" id="5oN-sX-nt5"/>
+                        <segue destination="waT-ke-V0H" kind="show" identifier="signupToMain" id="ScZ-Fd-mUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntq-2L-xfD" userLabel="First Responder" sceneMemberID="firstResponder"/>

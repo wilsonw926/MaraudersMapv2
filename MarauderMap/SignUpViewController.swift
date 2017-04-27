@@ -14,11 +14,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    var ref:FIRDatabaseReference?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameField.delegate = self
         emailField.delegate = self
         passwordField.delegate = self
+        ref = FIRDatabase.database().reference()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,6 +52,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         self.performSegue(withIdentifier: "signupToMain", sender: self)
                     }
                 })
+                self.ref?.child("Users").childByAutoId().setValue(["Name": name])
+                self.ref?.child("Users").childByAutoId().setValue(["Name": name])
             }})
     }
     
