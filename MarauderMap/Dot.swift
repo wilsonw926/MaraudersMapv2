@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class dot: NSObject, MKAnnotation {
+class Dot: NSObject, MKAnnotation {
     let title: String?
     //let locationName: String
     //let discipline: String

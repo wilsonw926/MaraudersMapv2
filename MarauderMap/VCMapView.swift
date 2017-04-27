@@ -14,7 +14,7 @@ extension ViewController: MKMapViewDelegate {
     // 1
     func mapView(_ mapView: MKMapView,
                  viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? dot {
+        if let annotation = annotation as? Dot {
             let identifier = "artPin"
             var view: MKPinAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
