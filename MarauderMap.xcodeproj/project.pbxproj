@@ -21,6 +21,8 @@
 		80818A721EB05A4B00E655DA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */; };
 		80818A751EB05A4B00E655DA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6E1EB05A4B00E655DA /* MapViewController.swift */; };
 		80818A761EB05A4B00E655DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6F1EB05A4B00E655DA /* User.swift */; };
+		8086EDA71EB168CA000AA262 /* dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086EDA61EB168CA000AA262 /* dot.swift */; };
+		8086EDA91EB172BF000AA262 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086EDA81EB172BF000AA262 /* VCMapView.swift */; };
 		80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ADEF981EB0525800B652E5 /* AppDelegate.swift */; };
 		80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ADEF9A1EB0525800B652E5 /* ViewController.swift */; };
 		80ADEF9E1EB0525800B652E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80ADEF9C1EB0525800B652E5 /* Main.storyboard */; };
@@ -70,6 +72,8 @@
 		80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		80818A6E1EB05A4B00E655DA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		80818A6F1EB05A4B00E655DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8086EDA61EB168CA000AA262 /* dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dot.swift; sourceTree = "<group>"; };
+		8086EDA81EB172BF000AA262 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		80ADEF951EB0525800B652E5 /* MarauderMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarauderMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80ADEF981EB0525800B652E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80ADEF9A1EB0525800B652E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +146,9 @@
 				49BBF4391EB076560017859B /* ProfileViewController.swift */,
 				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
 				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
+				8086EDA81EB172BF000AA262 /* VCMapView.swift */,
 				49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */,
+				8086EDA61EB168CA000AA262 /* dot.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -518,11 +524,13 @@
 			files = (
 				80818A711EB05A4B00E655DA /* SignInViewController.swift in Sources */,
 				80818A751EB05A4B00E655DA /* MapViewController.swift in Sources */,
+				8086EDA91EB172BF000AA262 /* VCMapView.swift in Sources */,
 				493AE6591EB088C8002B6A02 /* SettingsViewController.swift in Sources */,
 				80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */,
 				80ADEFA11EB0525800B652E5 /* MarauderMap.xcdatamodeld in Sources */,
 				80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */,
 				49BBF4381EB074900017859B /* NearbyViewController.swift in Sources */,
+				8086EDA71EB168CA000AA262 /* dot.swift in Sources */,
 				49BBF43C1EB078E80017859B /* NearbyTableViewCell.swift in Sources */,
 				49BBF43A1EB076560017859B /* ProfileViewController.swift in Sources */,
 				80818A721EB05A4B00E655DA /* SignUpViewController.swift in Sources */,

@@ -9,9 +9,13 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    var recording = false
+    var mytimer:Timer?
+    var started = false
+    var red = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,61 @@ class MapViewController: UIViewController {
         self.mapView.showsUserLocation = true
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if !recording {
+            //starttime = Date()
+           
+            mytimer = Timer.scheduledTimer(timeInterval: 0.6, target: self,
+                                           selector: #selector(MapViewController.updateTime(_timer:)),
+                                           userInfo: nil,
+                                           repeats: true)
+            recording = true
+        }
+        else {
+            //mytimer?.invalidate()
+        }
+    }
+    
+    var i = 0.0001
+    func updateTime(_timer: Timer) {
+        //let newtime = initialdate.timeIntervalSinceNow
+        i += 0.0001
+        if (started) {
+            let allAnnotations = self.mapView.annotations
+            self.mapView.removeAnnotation(allAnnotations as! MKAnnotation)
+        }
+        //started = true
+        var userdictionary = [String: [Double]]()
+        userdictionary["Nab"] = [37.8719 + i, -122.2585]
+        userdictionary["Wilson"] = [37.8792, -122.2519 + i]
+        userdictionary["JC"] = [37.8769 + i, -122.2500 + i]
+        userdictionary["AD"] = [37.8769 - i, -122.2500 + i]
+        userdictionary["Shiv"] = [37.8762, -122.2550 - (i*2)]
+        userdictionary["Leine"] = [37.8719 + sin(i), -122.2585 + sin(i)]
+        
+        var coordinatesarray: [CLLocationCoordinate2D] = []
+        for (key, value) in userdictionary {
+            let lat = value[0]
+            let lon = value[1]
+            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            var annotation = dot.init(title: key, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
+            //print(red)
+            if (red) {
+                //annotation.pinTintColor() = MKPinAnnotationView.redPinColor()
+                //annotation.setTintColor(col: UIColor.red)
+                annotation = dot.init(title: key, coll: UIColor.red, coordinate: coordinate)
+                red = false
+            } else {
+                 annotation = dot.init(title: key, coll: UIColor.green, coordinate: coordinate)
+                red = true
+            }
+            mapView.addAnnotation(annotation)
+        }
+        
+        //TimeInterval newtime = _timer.timeInterval;
+    }
+
     
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
