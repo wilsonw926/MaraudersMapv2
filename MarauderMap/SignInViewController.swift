@@ -21,13 +21,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         // Checks if user is already signed in and skips login
-        if FIRAuth.auth()?.currentUser != nil {
-            self.performSegue(withIdentifier: "loginToMain", sender: self)
-        }
+//        if FIRAuth.auth()?.currentUser != nil {
+//            self.performSegue(withIdentifier: "loginToMain", sender: self)
+//        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     @IBAction func didAttemptLogin(_ sender: Any) {
         guard let emailText = emailField.text else { return }
         guard let passwordText = passwordField.text else { return }

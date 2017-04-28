@@ -45,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="didAttemptLogin2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVU-hj-2rG"/>
+                                    <action selector="didAttemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wZf-Zm-JWx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t53-CK-WCk">
@@ -68,7 +68,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PY-Pc-kph">
                                 <rect key="frame" x="164" y="99" width="47" height="21"/>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntq-2L-xfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="561.76911544227892"/>
+            <point key="canvasLocation" x="-718" y="630"/>
         </scene>
         <!--TitleScreen-->
         <scene sceneID="WCn-Xv-kip">
@@ -607,6 +607,6 @@
         <image name="sketches-sathertower.png" width="666" height="910"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ScZ-Fd-mUk"/>
+        <segue reference="bmc-HJ-uUc"/>
     </inferredMetricsTieBreakers>
 </document>
