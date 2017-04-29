@@ -43,32 +43,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var i = 0.0001
     func updateTime(_timer: Timer) {
-        //let newtime = initialdate.timeIntervalSinceNow
+        let allAnnotations = self.mapView.annotations
         i += 0.0001
-        if (started) {
-            let allAnnotations = self.mapView.annotations
-            self.mapView.removeAnnotation(allAnnotations as! MKAnnotation)
-        }
-        //started = true
+        self.mapView.removeAnnotations(allAnnotations)
+        started = true
         var userdictionary = [String: [Double]]()
         userdictionary["Nab"] = [37.8719 + i, -122.2585]
-        
         var coordinatesarray: [CLLocationCoordinate2D] = []
         for (key, value) in userdictionary {
             let lat = value[0]
             let lon = value[1]
             let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
             var annotation = Dot.init(title: key, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
-            //print(red)
-            if (red) {
-                //annotation.pinTintColor() = MKPinAnnotationView.redPinColor()
-                //annotation.setTintColor(col: UIColor.red)
-                annotation = Dot.init(title: key, coll: UIColor.red, coordinate: coordinate)
-                red = false
-            } else {
-                 annotation = Dot.init(title: key, coll: UIColor.green, coordinate: coordinate)
-                red = true
-            }
             mapView.addAnnotation(annotation)
         }
         
@@ -81,16 +67,5 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-    
-    func makeAnnotation(location: CLLocation) {
-        
-        
-    }
-    
-    func updateAnnotation(location: CLLocation) {
-        
-        
-    }
-
 }
 

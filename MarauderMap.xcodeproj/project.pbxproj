@@ -140,11 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
-				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
 				49BBF4371EB074900017859B /* NearbyViewController.swift */,
 				493AE6581EB088C7002B6A02 /* SettingsViewController.swift */,
 				49BBF4391EB076560017859B /* ProfileViewController.swift */,
-				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
 				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
 				8086EDA81EB172BF000AA262 /* VCMapView.swift */,
 				49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */,
@@ -169,6 +167,15 @@
 				742D7BB61A53434B5D381731 /* Pods_MarauderMapUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80134D901EB40D5F00283F83 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				80818A6A1EB05A4B00E655DA /* SignInViewController.swift */,
+				80818A6B1EB05A4B00E655DA /* SignUpViewController.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		80ADEF8C1EB0525800B652E5 = {
@@ -197,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				80ADEF981EB0525800B652E5 /* AppDelegate.swift */,
+				80134D901EB40D5F00283F83 /* Auth */,
 				49BBF4211EB06DC90017859B /* Controllers */,
 				49BBF4221EB06DE60017859B /* Model */,
 				80ADEF9C1EB0525800B652E5 /* Main.storyboard */,

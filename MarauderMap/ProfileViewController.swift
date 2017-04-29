@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
 
+    var ref:FIRDatabaseReference?
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var bio: UILabel!
@@ -20,6 +23,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FIRDatabase.database().reference()
 //        if let img = profilePic {
 //            imageView.image = img
 //        }
