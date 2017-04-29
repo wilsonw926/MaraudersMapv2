@@ -12,7 +12,7 @@ import FirebaseStorage
 
 class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
+    var ref:FIRDatabaseReference?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {

@@ -14,7 +14,7 @@
 		49BBF4351EB074060017859B /* parchement.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF4311EB074060017859B /* parchement.png */; };
 		49BBF4361EB074060017859B /* Person.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BBF4321EB074060017859B /* Person.png */; };
 		49BBF4381EB074900017859B /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF4371EB074900017859B /* NearbyViewController.swift */; };
-		49BBF43A1EB076560017859B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF4391EB076560017859B /* ProfileViewController.swift */; };
+		49BBF43A1EB076560017859B /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF4391EB076560017859B /* FriendsViewController.swift */; };
 		49BBF43C1EB078E80017859B /* NearbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */; };
 		561E6636249318486C3BBEE9 /* Pods_MarauderMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742D7BB61A53434B5D381731 /* Pods_MarauderMapUITests.framework */; };
 		80818A711EB05A4B00E655DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6A1EB05A4B00E655DA /* SignInViewController.swift */; };
@@ -23,6 +23,7 @@
 		80818A761EB05A4B00E655DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80818A6F1EB05A4B00E655DA /* User.swift */; };
 		8086EDA71EB168CA000AA262 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086EDA61EB168CA000AA262 /* Dot.swift */; };
 		8086EDA91EB172BF000AA262 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8086EDA81EB172BF000AA262 /* VCMapView.swift */; };
+		80A5AAB31EB44B01007EB65C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A5AAB21EB44B01007EB65C /* ProfileViewController.swift */; };
 		80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ADEF981EB0525800B652E5 /* AppDelegate.swift */; };
 		80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ADEF9A1EB0525800B652E5 /* ViewController.swift */; };
 		80ADEF9E1EB0525800B652E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80ADEF9C1EB0525800B652E5 /* Main.storyboard */; };
@@ -64,7 +65,7 @@
 		49BBF4311EB074060017859B /* parchement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parchement.png; path = Assets.xcassets/parchement.png; sourceTree = "<group>"; };
 		49BBF4321EB074060017859B /* Person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Person.png; path = Assets.xcassets/Person.png; sourceTree = "<group>"; };
 		49BBF4371EB074900017859B /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
-		49BBF4391EB076560017859B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		49BBF4391EB076560017859B /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTableViewCell.swift; sourceTree = "<group>"; };
 		71F13A67587B04FB43106A64 /* Pods_MarauderMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarauderMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		742D7BB61A53434B5D381731 /* Pods_MarauderMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarauderMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +75,7 @@
 		80818A6F1EB05A4B00E655DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8086EDA61EB168CA000AA262 /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		8086EDA81EB172BF000AA262 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		80A5AAB21EB44B01007EB65C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		80ADEF951EB0525800B652E5 /* MarauderMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarauderMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80ADEF981EB0525800B652E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80ADEF9A1EB0525800B652E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +144,8 @@
 				80ADEF9A1EB0525800B652E5 /* ViewController.swift */,
 				49BBF4371EB074900017859B /* NearbyViewController.swift */,
 				493AE6581EB088C7002B6A02 /* SettingsViewController.swift */,
-				49BBF4391EB076560017859B /* ProfileViewController.swift */,
+				80A5AAB21EB44B01007EB65C /* ProfileViewController.swift */,
+				49BBF4391EB076560017859B /* FriendsViewController.swift */,
 				80818A6E1EB05A4B00E655DA /* MapViewController.swift */,
 				8086EDA81EB172BF000AA262 /* VCMapView.swift */,
 				49BBF43B1EB078E80017859B /* NearbyTableViewCell.swift */,
@@ -534,13 +537,14 @@
 				80818A751EB05A4B00E655DA /* MapViewController.swift in Sources */,
 				8086EDA91EB172BF000AA262 /* VCMapView.swift in Sources */,
 				493AE6591EB088C8002B6A02 /* SettingsViewController.swift in Sources */,
+				80A5AAB31EB44B01007EB65C /* ProfileViewController.swift in Sources */,
 				80ADEF9B1EB0525800B652E5 /* ViewController.swift in Sources */,
 				80ADEFA11EB0525800B652E5 /* MarauderMap.xcdatamodeld in Sources */,
 				80ADEF991EB0525800B652E5 /* AppDelegate.swift in Sources */,
 				49BBF4381EB074900017859B /* NearbyViewController.swift in Sources */,
 				8086EDA71EB168CA000AA262 /* Dot.swift in Sources */,
 				49BBF43C1EB078E80017859B /* NearbyTableViewCell.swift in Sources */,
-				49BBF43A1EB076560017859B /* ProfileViewController.swift in Sources */,
+				49BBF43A1EB076560017859B /* FriendsViewController.swift in Sources */,
 				80818A721EB05A4B00E655DA /* SignUpViewController.swift in Sources */,
 				80818A761EB05A4B00E655DA /* User.swift in Sources */,
 			);
