@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class FriendsViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
     var ref:FIRDatabaseReference?
     

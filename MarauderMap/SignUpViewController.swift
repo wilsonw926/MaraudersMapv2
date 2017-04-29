@@ -52,8 +52,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         self.performSegue(withIdentifier: "signupToMain", sender: self)
                     }
                 })
-                self.ref?.child("Users").childByAutoId().setValue(["Name": name])
-                self.ref?.child("Users").childByAutoId().setValue(["Name": name])
+                self.ref?.child("Users").childByAutoId().setValue(["Name": name, "Latitude": 0, "Longitude": 0])
             }})
     }
     

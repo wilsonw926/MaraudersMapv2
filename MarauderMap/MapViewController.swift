@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Firebase
+import FirebaseAuth
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
@@ -16,14 +18,31 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var mytimer:Timer?
     var started = false
     var red = true
+    var lat = 0
+    var lon = 0
+    var currLocation = CLLocation()
+    var ref:FIRDatabaseReference?
+    
+    // Map ID to Double array [latitude, longitude]
+    var userdictionary = [String: [Double]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        ref = FIRDatabase.database().reference()
         let initialLocation = CLLocation(latitude: 37.8719, longitude: -122.2585)
         centerMapOnLocation(location: initialLocation)
         self.mapView.showsUserLocation = true
         
+        let locManager = CLLocationManager()
+        if (CLLocationManager.locationServicesEnabled()) {
+            currLocation = locManager.location!
+            
+            //self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["Longitude": lg])
+            
+        } else {
+            locManager.requestWhenInUseAuthorization()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,15 +60,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    var i = 0.0001
     func updateTime(_timer: Timer) {
         let allAnnotations = self.mapView.annotations
-        i += 0.0001
         self.mapView.removeAnnotations(allAnnotations)
-        started = true
-        var userdictionary = [String: [Double]]()
-        userdictionary["Nab"] = [37.8719 + i, -122.2585]
-        var coordinatesarray: [CLLocationCoordinate2D] = []
+        let lg = currLocation.coordinate.longitude
+        let lt = currLocation.coordinate.latitude
+        ref?.child("Users").child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["Latitude": lt, "Longitude": lg])
+        //self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["Latitude": 1])
+        userdictionary["Nab"] = [currLocation.coordinate.latitude, currLocation.coordinate.longitude]
         for (key, value) in userdictionary {
             let lat = value[0]
             let lon = value[1]
