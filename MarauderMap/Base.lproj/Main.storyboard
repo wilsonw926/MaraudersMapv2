@@ -426,7 +426,7 @@
         <scene sceneID="ucf-CN-5ve">
             <objects>
                 <navigationController id="P9a-It-JMK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nearby" id="ryb-CH-XKt"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" selectedImage="25Nearby" id="ryb-CH-XKt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXu-dw-Aro">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -514,12 +514,6 @@
                                 <rect key="frame" x="67" y="94" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-E1-bN6">
-                                <rect key="frame" x="138" y="320" width="98" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="Add"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55x-RZ-nQY">
                                 <rect key="frame" x="16" y="367" width="343" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -539,7 +533,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="Xbb-E1-bN6" id="X3i-yu-QY6"/>
                         <outlet property="bio" destination="55x-RZ-nQY" id="cVV-C5-am6"/>
                         <outlet property="imageView" destination="Un6-gW-Afa" id="2h5-bn-Es6"/>
                         <outlet property="name" destination="uhT-fn-6BS" id="x9s-1q-2G9"/>
@@ -605,6 +598,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="25Nearby" width="25" height="25"/>
         <image name="MaraudersMapBanner" width="498" height="479"/>
         <image name="Open.png" width="434" height="129"/>
         <image name="Person" width="108" height="104"/>

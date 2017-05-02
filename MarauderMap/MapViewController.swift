@@ -62,19 +62,41 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func updateTime(_timer: Timer) {
         let allAnnotations = self.mapView.annotations
-        self.mapView.removeAnnotations(allAnnotations)
+        //self.mapView.removeAnnotations(allAnnotations)
         let lg = currLocation.coordinate.longitude
         let lt = currLocation.coordinate.latitude
-        ref?.child("Users").child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["Latitude": lt, "Longitude": lg])
-        //self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["Latitude": 1])
-        userdictionary["Nab"] = [currLocation.coordinate.latitude, currLocation.coordinate.longitude]
-        for (key, value) in userdictionary {
-            let lat = value[0]
-            let lon = value[1]
-            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            var annotation = Dot.init(title: key, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
-            mapView.addAnnotation(annotation)
-        }
+        let user = FIRAuth.auth()?.currentUser
+        ref?.child("Users").child((user?.uid)!).child("Latitude").setValue(lt)
+        ref?.child("Users").child((user?.uid)!).child("Longitude").setValue(lg)
+        
+        ref?.child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
+            let usersDict = snapshot.value as! NSDictionary
+            for val in usersDict.allValues {
+                let dict = val as! NSDictionary
+                let coordinate = CLLocationCoordinate2D(latitude: dict["Latitude"] as! Double, longitude: dict["Longitude"] as! Double)
+                let annotation = Dot.init(title: dict["Name"] as! String, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
+                self.mapView.addAnnotation(annotation)
+                
+            }
+        })
+        
+//        let coordinate = CLLocationCoordinate2D(latitude: lt, longitude: lg)
+//        let annotation = Dot.init(title: (user?.displayName)!, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
+//        mapView.addAnnotation(annotation)
+        
+        
+//        let coordinate = CLLocationCoordinate2D(latitude: 37.8673, longitude: -122.2609)
+//        let annotation = Dot.init(title: "Vidyaahhhh", coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
+//        mapView.addAnnotation(annotation)
+        
+//        userdictionary["Nab"] = [currLocation.coordinate.latitude, currLocation.coordinate.longitude]
+//        for (key, value) in userdictionary {
+//            let lat = value[0]
+//            let lon = value[1]
+//            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+//            let annotation = Dot.init(title: key, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
+//            mapView.addAnnotation(annotation)
+//        }
         
         //TimeInterval newtime = _timer.timeInterval;
     }

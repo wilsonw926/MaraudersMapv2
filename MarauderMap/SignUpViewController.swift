@@ -52,7 +52,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         self.performSegue(withIdentifier: "signupToMain", sender: self)
                     }
                 })
-                self.ref?.child("Users").childByAutoId().setValue(["Name": name, "Latitude": 0, "Longitude": 0])
+//                self.ref?.child("Users").childByAutoId().setValue(["Name": name, "Latitude": 0, "Longitude": 0])
+                let cUser = FIRAuth.auth()?.currentUser
+                self.ref?.child("Users").child((cUser?.uid)!).setValue(["Name": name, "Latitude": 0, "Longitude": 0])
             }})
     }
     
