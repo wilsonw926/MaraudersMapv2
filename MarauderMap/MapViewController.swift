@@ -49,7 +49,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if !recording {
             //starttime = Date()
            
-            mytimer = Timer.scheduledTimer(timeInterval: 0.6, target: self,
+            mytimer = Timer.scheduledTimer(timeInterval: 30, target: self,
                                            selector: #selector(MapViewController.updateTime(_timer:)),
                                            userInfo: nil,
                                            repeats: true)
@@ -62,7 +62,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func updateTime(_timer: Timer) {
         let allAnnotations = self.mapView.annotations
-        //self.mapView.removeAnnotations(allAnnotations)
+        self.mapView.removeAnnotations(allAnnotations)
         let lg = currLocation.coordinate.longitude
         let lt = currLocation.coordinate.latitude
         let user = FIRAuth.auth()?.currentUser
