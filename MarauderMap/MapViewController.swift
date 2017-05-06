@@ -37,9 +37,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let locManager = CLLocationManager()
         if (CLLocationManager.locationServicesEnabled()) {
             currLocation = locManager.location!
-            
-            //self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["Longitude": lg])
-            
+
         } else {
             locManager.requestWhenInUseAuthorization()
         }
@@ -49,7 +47,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if !recording {
             //starttime = Date()
            
-            mytimer = Timer.scheduledTimer(timeInterval: 30, target: self,
+            mytimer = Timer.scheduledTimer(timeInterval: 2, target: self,
                                            selector: #selector(MapViewController.updateTime(_timer:)),
                                            userInfo: nil,
                                            repeats: true)
@@ -66,6 +64,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let lg = currLocation.coordinate.longitude
         let lt = currLocation.coordinate.latitude
         let user = FIRAuth.auth()?.currentUser
+        ref?.child("Users").child((user?.uid)!).child("Name").setValue(user?.displayName)
         ref?.child("Users").child((user?.uid)!).child("Latitude").setValue(lt)
         ref?.child("Users").child((user?.uid)!).child("Longitude").setValue(lg)
         
@@ -79,26 +78,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 
             }
         })
-        
-//        let coordinate = CLLocationCoordinate2D(latitude: lt, longitude: lg)
-//        let annotation = Dot.init(title: (user?.displayName)!, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
-//        mapView.addAnnotation(annotation)
-        
-        
-//        let coordinate = CLLocationCoordinate2D(latitude: 37.8673, longitude: -122.2609)
-//        let annotation = Dot.init(title: "Vidyaahhhh", coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
-//        mapView.addAnnotation(annotation)
-        
-//        userdictionary["Nab"] = [currLocation.coordinate.latitude, currLocation.coordinate.longitude]
-//        for (key, value) in userdictionary {
-//            let lat = value[0]
-//            let lon = value[1]
-//            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-//            let annotation = Dot.init(title: key, coll: MKPinAnnotationView.greenPinColor(), coordinate: coordinate)
-//            mapView.addAnnotation(annotation)
-//        }
-        
-        //TimeInterval newtime = _timer.timeInterval;
+
     }
 
     
